@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<style>
+    #code {
+        margin: auto;
+        width: 30%;
+        border: 1px solid grey;
+        padding: 20px;
+    }
+
+    #tlacitko {
+        margin-inline: auto;
+        width: 100%;
+        padding: 5px;
+        background-color: black;
+        color: white;
+    }
+
+
+</style>
+
+<body>
+<div id="root"></div>
+<script type="text/jsx" defer>
+    const rootElement = document.getElementById('root');
+    const root = ReactDOM.createRoot(rootElement)
+
+    function Card() {
+        return (
+            <div id="code">
+                <img src="https://placekitten.com/g/200/300" alt="Kočička"/>
+                <header>První stránka v Reactu! 👋</header>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas lorem. In dapibus augue non
+                    sapien. Pellentesque ipsum. Praesent vitae arcu tempor neque lacinia pretium. Nulla non arcu lacinia
+                    neque faucibus fringilla. In convallis. Duis sapien nunc, commodo et, interdum suscipit,
+                    sollicitudin et, dolor. Aenean fermentum risus id tortor. Vestibulum erat nulla, ullamcorper nec,
+                    rutrum non, nonummy ac, erat. Nullam faucibus mi quis velit. Duis condimentum augue id magna semper
+                    rutrum. Etiam neque. Nullam rhoncus aliquam metus. Quisque porta. Donec quis nibh at felis congue
+                    commodo. Phasellus faucibus molestie nisl. Quis autem vel eum iure reprehenderit qui in ea voluptate
+                    velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+                    pariatur?</p>
+                <button id="tlacitko">Button</button>
+
+            </div>);
+
+    }
+
+    root.render(<Card/>)
+
+    function Cards() {
+        return (
+            <section>
+                <Card/>
+                <Card/>
+                <Card/>
+            </section>
+    )
+    }
+    root.render(<Cards/>)
+
+    //   <div id="code">
+    //   <img src="https://placekitten.com/g/200/300" alt="Kočička"/>
+    // <header>První stránka v Reactu! 👋</header>
+    // <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas lorem. In dapibus augue non sapien. Pellentesque ipsum. Praesent vitae arcu tempor neque lacinia pretium. Nulla non arcu lacinia neque faucibus fringilla. In convallis. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Aenean fermentum risus id tortor. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Nullam faucibus mi quis velit. Duis condimentum augue id magna semper rutrum. Etiam neque. Nullam rhoncus aliquam metus. Quisque porta. Donec quis nibh at felis congue commodo. Phasellus faucibus molestie nisl. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    // <button id="tlacitko">Button</button>
+
+    //</div>);
+</script>
+</body>
+</html>
